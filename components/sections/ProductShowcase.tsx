@@ -59,7 +59,7 @@ const products = [
 
 const ProductShowcase = () => {
   return (
-    <section className="bg-black relative">
+    <section id="products" className="bg-black relative">
       {/* Cinematic Transition from Hero */}
       <div className="absolute top-0 left-0 w-full h-96 bg-gradient-to-b from-[#020617] to-black pointer-events-none" />
 

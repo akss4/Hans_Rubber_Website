@@ -6,8 +6,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent, useSpring, use
 import { Menu, X, ArrowRight } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Products", href: "/products" },
+  { name: "Products", href: "#products" },
   { name: "Certifications", href: "/certifications" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
@@ -20,6 +19,17 @@ const Navbar = () => {
   const [isAtTop, setIsAtTop] = useState(true);
   
   const { scrollY } = useScroll();
+
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.replace("#", "");
+      const elem = document.getElementById(targetId);
+      elem?.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
   
   // Smooth spring for background and blur transitions
   const smoothScrollY = useSpring(scrollY, {
@@ -137,7 +147,8 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="px-5 py-2 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 hover:text-white transition-all duration-300 relative group"
+                  onClick={(e) => handleScroll(e, item.href)}
+                  className="px-5 py-2 text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400 hover:text-white transition-all duration-300 relative group"
                 >
                   {item.name}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[1px] bg-blue-500 transition-all duration-300 group-hover:w-4 opacity-0 group-hover:opacity-100" />
@@ -189,8 +200,11 @@ const Navbar = () => {
                 >
                   <Link
                     href={item.href}
+                    onClick={(e) => {
+                      handleScroll(e, item.href);
+                      setIsOpen(false);
+                    }}
                     className="text-3xl font-bold tracking-tight text-white/40 hover:text-white transition-colors"
-                    onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </Link>

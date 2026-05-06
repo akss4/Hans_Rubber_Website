@@ -41,7 +41,7 @@ const AboutManufacturing = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as any }}
             className="lg:col-span-7"
           >
             <div className="space-y-6">
@@ -62,7 +62,7 @@ const AboutManufacturing = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] as any, delay: 0.2 }}
             className="lg:col-span-5 space-y-10"
           >
             <p className="text-base md:text-lg text-slate-400 leading-relaxed font-normal antialiased max-w-lg">
@@ -87,7 +87,7 @@ const AboutManufacturing = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] as any }}
             className="lg:col-span-8 relative aspect-video bg-[#0a0a0a] overflow-hidden rounded-2xl border border-white/[0.03] group shadow-2xl"
           >
             <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-1000" />
@@ -149,7 +149,7 @@ const AboutManufacturing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: idx * 0.1, duration: 1.2, ease: [0.16, 1, 0.3, 1] as any }}
                 className="group space-y-6"
               >
                 {/* Minimal Card Image Placeholder */}
