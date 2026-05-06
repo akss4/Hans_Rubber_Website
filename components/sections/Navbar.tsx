@@ -115,15 +115,20 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-8 md:px-16 lg:px-24 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-4 group relative z-10">
+          <button 
+            onClick={() => {
+              document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="flex items-center gap-4 group relative z-10 cursor-pointer outline-none"
+          >
             <div className="w-8 h-8 bg-white text-black flex items-center justify-center font-bold text-lg rounded-sm transition-transform duration-500 group-hover:scale-[0.9]">
               H
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col items-start">
               <span className="text-base font-bold tracking-[-0.03em] text-white leading-none">HANS</span>
               <span className="text-[7px] tracking-[0.4em] text-slate-600 uppercase font-black leading-none mt-1.5 transition-colors group-hover:text-blue-400">Industries</span>
             </div>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2">

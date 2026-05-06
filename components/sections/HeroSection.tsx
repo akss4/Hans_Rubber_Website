@@ -27,12 +27,12 @@ const HeroSection = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] },
+      transition: { duration: 1, ease: [0.16, 1, 0.3, 1] as any },
     },
   };
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col bg-[#020617] overflow-hidden pt-40 pb-20">
+    <section id="hero" className="relative min-h-screen w-full flex flex-col bg-[#020617] overflow-hidden pt-40 pb-20">
       {/* Background: Cinematic Lighting & Technical Grid */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Directional Lights */}
