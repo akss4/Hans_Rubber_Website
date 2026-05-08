@@ -134,7 +134,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                                 name: e.target.value,
                                 })
                                }
-                          placeholder="Akash Singh"
+                          placeholder="Aks"
                           className="w-full bg-white/[0.03] border border-white/10 rounded-2xl px-6 py-4 text-white placeholder:text-white/10 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-500"
                         />
                       </div>
