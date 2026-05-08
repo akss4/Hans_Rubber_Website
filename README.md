@@ -71,3 +71,37 @@ The website includes a fully working frontend-to-backend contact form pipeline.
 
 ```bash
 app/api/contact/route.ts
+
+## Project Structure
+
+```bash
+app/
+├── api/
+│   └── contact/
+│       └── route.ts
+│
+├── contact/
+│   └── page.tsx
+│
+├── globals.css
+├── layout.tsx
+└── page.tsx
+
+components/
+└── sections/
+    ├── Navbar.tsx
+    ├── HeroSection.tsx
+    ├── ProductShowcase.tsx
+    ├── InnovationQuality.tsx
+    ├── ServicesSection.tsx
+    ├── FAQSection.tsx
+    ├── QueryForm.tsx
+    └── Footer.tsx
+
+public/
+
+package.json
+tsconfig.json
+next.config.ts
+README.md
+```
