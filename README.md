@@ -70,7 +70,7 @@ The website includes a fully working frontend-to-backend contact form pipeline.
 ## Backend Route
 
 ```bash
-app/api/contact/route.ts
+\e[35mapp/api/contact/route.ts\e[0m
 ```
 
 
