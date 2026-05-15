@@ -97,7 +97,7 @@ const ProductShowcase = () => {
             viewport={{ once: true }}
             className="group relative px-12 py-5 bg-white text-black rounded-full text-[10px] font-bold uppercase tracking-[0.25em] transition-all hover:bg-slate-100 flex items-center gap-4"
           >
-            Explore Full Range
+            Explore All Products
             <div className="w-5 h-5 rounded-full bg-black/5 flex items-center justify-center group-hover:translate-x-1 transition-transform">
               <ChevronRight size={12} />
             </div>

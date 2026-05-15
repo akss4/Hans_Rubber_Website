@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
 
 const whyChooseUs = [
   {
@@ -217,6 +218,7 @@ const InnovationQuality = () => {
               transition={{ delay: 0.4, duration: 1.2 }}
               className="flex flex-col sm:flex-row items-center gap-8"
             >
+              <Link href="/contact">
               <motion.button 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -227,6 +229,7 @@ const InnovationQuality = () => {
                   <ArrowRight size={14} className="text-white" />
                 </div>
               </motion.button>
+              </Link>
             </motion.div>
           </motion.div>
         </div>

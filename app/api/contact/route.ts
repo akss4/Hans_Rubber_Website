@@ -1,3 +1,5 @@
+import { appendToSheet } from "@/lib/googleSheets";
+
 export async function POST(request: Request) {
   const body = await request.json();
 
@@ -13,6 +15,14 @@ export async function POST(request: Request) {
       }
     );
   }
+
+  await appendToSheet([
+    name,
+    phone,
+    email,
+    description,
+    new Date().toLocaleDateString(),
+  ]);
 
   console.log(body);
 
